@@ -19,21 +19,23 @@ function addTweet(event) {
 
 tweetText.addEventListener("keyup", startCounter)
 
-function startCounter(event) {
+function disabledButton() {
     let counterValue = maxTweetLength - tweetText.value.length;
-    counter.textContent = counterValue;
-    
     if (counterValue === maxTweetLength || counterValue < 0) {
         tweetButton.setAttribute("disabled", "");
-    }else {
+    } else {
         tweetButton.removeAttribute("disabled");
     }
+}
 
+function startCounter(event) {
+    disabledButton(counterValue)    
+    
     if (tweetText.value.length > 130) {
         counter.setAttribute("class","red");
-    }else if (tweetText.value.length > 120) {
+    } else if (tweetText.value.length > 120) {
         counter.setAttribute("class","yellow");
-    }else {
+    } else {
         counter.setAttribute("class","blue");
     }
 }
