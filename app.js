@@ -7,10 +7,16 @@ const maxTweetLength = 140;
 tweetButton.addEventListener("click", addTweet);
 
 function addTweet(event) {
-    let paragraph = document.createElement("p");
-    paragraph.textContent = tweetText.value + moment().startOf().fromNow();
-    newTweet.appendChild(paragraph);
-    tweetText.value = "";
+    let hour = moment().startOf().fromNow();
+    let bloquinho = `
+        <div> 
+        <img src="https://pbs.twimg.com/profile_images/928629694467051521/VrMwtDK0_400x400.jpg">
+        <h1>@aquijuz</h1>
+        <span>${hour}</span>
+        <p>${tweetText.value}</p>
+        </div>
+    `;
+    newTweet.innerHTML += bloquinho
 }
 
 tweetText.addEventListener("keyup", onTextChange);
