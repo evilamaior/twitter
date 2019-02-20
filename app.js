@@ -1,14 +1,15 @@
 let tweetText = document.querySelector("#tweetText");
 let tweetButton = document.querySelector("#tweetButton");
-let tweetList = document.querySelector("#tweetList");
+let newTweet = document.querySelector("#newTweet");
 let counter = document.querySelector("#counter");
 const maxTweetLength = 140;
+
 tweetButton.addEventListener("click", addTweet);
 
 function addTweet(event) {
-    let listItem = document.createElement("li");
-    listItem.textContent = tweetText.value;
-    tweetList.appendChild(listItem);
+    let paragraph = document.createElement("p");
+    paragraph.textContent = tweetText.value + moment().startOf().fromNow();
+    newTweet.appendChild(paragraph);
     tweetText.value = "";
 }
 
