@@ -8,15 +8,17 @@ tweetButton.addEventListener("click", addTweet);
 
 function addTweet(event) {
     let hour = moment().startOf().fromNow();
-    let bloquinho = `
-        <div> 
-        <img src="https://pbs.twimg.com/profile_images/928629694467051521/VrMwtDK0_400x400.jpg">
+    let printTweet = `
+        <div class="tweet">
+        <div class="info-tweet">
+        <img class="aquijuz" src="https://pbs.twimg.com/profile_images/928629694467051521/VrMwtDK0_400x400.jpg">
         <h1>@aquijuz</h1>
         <span>${hour}</span>
+        </div>
         <p>${tweetText.value}</p>
         </div>
     `;
-    newTweet.innerHTML += bloquinho
+    newTweet.innerHTML += printTweet
 }
 
 tweetText.addEventListener("keyup", onTextChange);

@@ -2,22 +2,36 @@
 
 <head>
     <title>Twitter</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <header>
+    <header class="twitter">
         <h1>Twitter</h1>
+        <i class="fab fa-twitter"></i>
     </header>
 
     <main>
+        <section class="home-twitter">
+            <img class="side-infos" src="images/user.png">
+            <section class="container-timeline-twitter">
+                <section class="container-tweet-area">
+                    <textarea name="tweetText" id="tweetText" cols="60" rows="5"></textarea>
+                    <div class="post-tweet">
+                        <span id="counter" class="blue">140</span>
+                        <input type="submit" value="Tweet" id="tweetButton" disabled>
+                    </div>
+                </section>
 
-        <textarea name="tweetText" id="tweetText" cols="60" rows="5"></textarea>
-        <input type="submit" value="Tweet" id="tweetButton" disabled>
-        <span id="counter" class="blue">140</span>
-        <article id="newTweet">
-        </article>
-
+                <article id="newTweet">
+                </article>
+            </section>
+        </section>
     </main>
 
 
