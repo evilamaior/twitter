@@ -18,7 +18,9 @@ function addTweet(event) {
         <p>${tweetText.value}</p>
         </div>
     `;
-    newTweet.innerHTML += printTweet
+    newTweet.innerHTML += printTweet;
+
+   tweetText.value = "";
 }
 
 tweetText.addEventListener("keyup", onTextChange);

@@ -6,9 +6,27 @@ body {
     background-color: #e6ecf0;
 }
 
+main {
+    width: 40%;
+}
+
 #tweetText {
     background-color: white;
     display: flex;
+}
+
+#counter {
+    font-family: 'Muli', sans-serif;
+    font-size: 15px;
+    color: #1DA1F2;
+    border: 2px solid #1B95E0;
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;  
 }
 
 #tweetButton {
@@ -25,54 +43,13 @@ body {
     justify-content: center;  
 }
 
-#counter {
-    font-family: 'Muli', sans-serif;
-    font-size: 15px;
-    color: #1DA1F2;
-    border: 2px solid #1B95E0;
-    border-radius: 20px;
-    height: 40px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 5%;
-    margin-left: 2%;   
-}
-
 #newTweet {
     background-color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-}
-
-.home-twitter {
-    display: flex;
-    flex-direction: row;
-}
-
-.container-timeline-twitter {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-.container-tweet-area {
-    background-color: white;
-    padding-top: 5%;
-    padding-left: 7%;
-    padding-right: 7%;
-    height: 25%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.post-tweet {
-    display: flex;
-    flex-direction: row;
-    margin-top: 3%; 
+    width: 100%;
 }
 
 .twitter {
@@ -97,20 +74,30 @@ body {
     color: #1DA1F2;
 }
 
+.twitter-home {
+    display: flex;
+}
+
+.container-tweet-area {
+    background-color: white;
+    padding-top: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-tweet {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%; 
+}
 
 .tweet {
     width: 80%;
     padding-bottom: 5%;
-}
-
-.tweet p {
-    border: 2px solid #1B95E0;
-    border-radius: 20px;
-    height: 80px;
-    width: 400px;
-    padding: 2%;
-    margin-bottom: 5%;
-    margin-top: 3%;
 }
 
 .info-tweet {
@@ -119,7 +106,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 10%;
 }
 
 .aquijuz {
@@ -136,10 +122,24 @@ body {
     margin-left: 2%;
 }
 
-.side-infos {
-    width: auto;
-    height: 70%;
+.tweet p {
+    border: 2px solid #1B95E0;
+    border-radius: 20px;
+    height: 80px;
+    width: 400px;
+    padding: 2%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    word-break: break-word;
 }
+
+
+
+
+
+
+
+
 
 .blue {
     color: blue;
