@@ -1,41 +1,37 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Twitter</title>
     <link href="https://fonts.googleapis.com/css?family=Muli&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
     <header class="twitter">
         <h1>Twitter</h1>
         <i class="fab fa-twitter"></i>
     </header>
-
     <section class="twitter-home">
         <aside>
             <img class="profile-infos" src="images/user.png">
         </aside>
-
         <main>
             <section class="container-tweet-area">
-                <textarea name="tweetText" id="tweetText" cols="60" rows="5"></textarea>
+                <textarea name="tweet-text" id="tweet-text" cols="60" rows="5"></textarea>
                 <div class="post-tweet">
                     <span id="counter" class="blue">140</span>
-                    <input type="submit" value="Tweet" id="tweetButton" disabled>
+                    <input type="submit" value="Tweet" id="tweet-button" disabled>
                 </div>
             </section>
-            <article id="newTweet">
+            <article id="new-tweet">
             </article>
         </main>
     </section>
-
     <script type="text/javascript" src="moment.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>
-
 </html>

@@ -18,7 +18,6 @@ main {
 #counter {
     font-family: 'Muli', sans-serif;
     font-size: 15px;
-    color: #1DA1F2;
     border: 2px solid #1B95E0;
     border-radius: 20px;
     height: 40px;
@@ -133,16 +132,8 @@ main {
     word-break: break-word;
 }
 
-
-
-
-
-
-
-
-
 .blue {
-    color: blue;
+    color: #1DA1F2;
 }
 
 .yellow {
