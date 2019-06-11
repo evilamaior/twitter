@@ -4,10 +4,12 @@ let newTweet = document.querySelector("#new-tweet");
 let counter = document.querySelector("#counter");
 const maxTweetLength = 140;
 
-tweetButton.addEventListener("click", addTweet);
+tweetButton.addEventListener("click", () => {
+    tweetButton.disabled = true;
+    addTweet()});
 
 tweetText.addEventListener("keyup", () => {
-    tweetButton.disable = false;
+    tweetButton.disabled = false;
     startCounter();
     resizedTweetText();
 });
@@ -30,7 +32,6 @@ function twitterTemplate(hour, tweet) {
         </div>`;
 }
 
-
 function startCounter() {
     let counterValue = maxTweetLength - tweetText.value.length;
     counter.textContent = counterValue;
@@ -39,11 +40,11 @@ function startCounter() {
 
 function counterStyle(counterValue) {
     if (counterValue <= maxTweetLength && counterValue > 20) {
-        counter.setAttribute("class", "blue");
+        counter.classList.add("class", "blue");
     } else if (counterValue <= 20 && counterValue > 10) {
-        counter.setAttribute("class", "yellow");
+        counter.classList.add("class", "yellow");
     } else if (counterValue <= 10) {
-        counter.setAttribute("class", "red");
+        counter.classList.add("class", "red");
         if(counterValue < 0){
             tweetButton.disabled = true;
         }
@@ -51,9 +52,7 @@ function counterStyle(counterValue) {
 }
 
 function resizedTweetText() {
-    if (tweetText.scrollHeight > tweetText.offsetHeight) {
-        tweetText.rows += 1;
-    }
-}
-
+    tweetText.style.height = '0px';
+    tweetText.style.height = tweetText.scrollHeight + 'px';
+   }
 
