@@ -5,7 +5,7 @@ let counter = document.querySelector("#counter");
 const maxTweetLength = 140;
 
 tweetButton.addEventListener("click", () => {
-    tweetButton.disabled = true;
+    reset()
     addTweet()});
 
 tweetText.addEventListener("keyup", () => {
@@ -23,6 +23,7 @@ function addTweet(event) {
 function twitterTemplate(hour, tweet) {
     return `
         <div class="tweet">
+            <hr class="line">
             <div class="info-tweet">
                 <img class="aquijuz" src="https://pbs.twimg.com/profile_images/928629694467051521/VrMwtDK0_400x400.jpg">
                 <h1>@aquijuz</h1>
@@ -40,11 +41,11 @@ function startCounter() {
 
 function counterStyle(counterValue) {
     if (counterValue <= maxTweetLength && counterValue > 20) {
-        counter.classList.add("class", "blue");
+        counter.className = "blue counter-style";
     } else if (counterValue <= 20 && counterValue > 10) {
-        counter.classList.add("class", "yellow");
+        counter.className = "yellow counter-style";
     } else if (counterValue <= 10) {
-        counter.classList.add("class", "red");
+        counter.className = "red counter-style";
         if(counterValue < 0){
             tweetButton.disabled = true;
         }
@@ -55,4 +56,11 @@ function resizedTweetText() {
     tweetText.style.height = '0px';
     tweetText.style.height = tweetText.scrollHeight + 'px';
    }
+
+function reset() {
+    counter.innerHTML = maxTweetLength;
+    counter.className = "blue counter-style";
+    tweetButton.disabled = true;
+    tweetText.style.height = "10vh";
+}
 

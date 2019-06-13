@@ -42,10 +42,8 @@ main {
 
 .container-tweet-area {
     background-color: white;
-    padding-top: 5vh;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    height: 25vh;
+    padding: 5vh 3vw 0 3vw;
+    min-height: 25vh;
     width: 40vw;
     display: flex;
     flex-direction: column;
@@ -59,7 +57,7 @@ main {
     overflow: hidden;
     resize: none;
     width: 35vw;
-    height: 10vh;
+    min-height: 10vh;
     box-sizing: content-box;
 }
 
@@ -79,7 +77,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 5%;  
+    margin-right: 5%; 
+    margin-bottom: 2vh;
 }
 
 .tweet-button-style {
@@ -104,13 +103,17 @@ main {
     align-items: center;
     width: 40vw;
     margin-left: 3vw;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding: 0 3vw;
 }
 
 .tweet {
     width: 35vw;
     padding-bottom: 3vh;
+}
+
+.line {
+    width: 35vw;
+    margin-bottom: 2vh;
 }
 
 .info-tweet {
@@ -131,8 +134,7 @@ main {
 .info-tweet h1 {
     font-family: 'Muli', sans-serif;
     font-size: 15px;
-    margin-right: 0.5vw;
-    margin-left: 0.5vw;
+    margin: 0 0.5vw;
 }
 
 .tweet p {
@@ -141,8 +143,7 @@ main {
     height: 10vh;
     width: 33vw;
     padding: 2%;
-    margin-bottom: 4vh;
-    margin-top: 4vh;
+    margin: 2vh 0 4vh 0;
     word-break: break-word;
 }
 
